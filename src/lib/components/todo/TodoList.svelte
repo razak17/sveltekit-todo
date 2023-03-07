@@ -1,8 +1,10 @@
 <script>
+	import { tasks } from '../../store/task';
+	import TodoItem from './TodoItem.svelte';
 </script>
 
-<div>
-  List
-</div>
-
-
+<ol class="todo-list">
+	{#each $tasks as task (task.id)}
+		<TodoItem {task} />
+	{/each}
+</ol>

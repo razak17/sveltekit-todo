@@ -20,9 +20,9 @@ tasks.subscribe((value) => {
 	}
 });
 
-export const addTask = () => {
+export const addTask = (name: string) => {
 	tasks.update((currentTasks) => {
-		const newTask = [...currentTasks, { id: uuidv4(), name: '', isComplete: false }];
+		const newTask = [...currentTasks, { id: uuidv4(), name, isComplete: false }];
 		return newTask;
 	});
 };

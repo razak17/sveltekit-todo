@@ -15,11 +15,3 @@
 	<TodoStats />
 	<TodoList />
 </div>
-
-<style>
-	.container {
-		max-width: 700px;
-		padding: 0 10px;
-		margin: 0 auto;
-	}
-</style>
