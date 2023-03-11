@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { deleteTask, editTask } from '../../store/task';
+
 	export let task: import('../../store/task').Task;
 
 	$: completeClass = task.isComplete ? 'checked' : '';
@@ -7,7 +9,12 @@
 
 <li id={`${task.id}`}>
 	<div class="checkbox-wrapper">
-		<input type="checkbox" id="${task.name}-${task.id}" name="tasks" class={completeClass} />
+		<input
+      type="checkbox"
+      id="${task.name}-${task.id}"
+      name="tasks"
+      class={completeClass}
+    />
 		<label for="${task.name}-${task.id}">
 			<svg class="checkbox-empty">
 				<use xlink:href="#checkbox_empty" />
@@ -18,7 +25,7 @@
 		</label>
 		<span class={completeClassSpan}>{task.name}</span>
 	</div>
-	<button class="remove-task" title="Remove ${task.name} task">
+	<button on:click={() => deleteTask(task.id)} class="remove-task" title="Remove ${task.name} task">
 		<svg>
 			<use xlink:href="#close" />
 		</svg>
