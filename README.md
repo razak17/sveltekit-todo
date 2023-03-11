@@ -36,3 +36,7 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Resources and inspiration
+
+- [How to Build a TODO App With Vanilla JavaScript (and Local Storage)](https://webdesign.tutsplus.com/tutorials/to-do-app-with-vanilla-javascript--cms-35258)
