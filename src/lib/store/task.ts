@@ -37,7 +37,7 @@ export const toggleComplete = (id: string) => {
 	tasks.update((currentTasks) => {
 		return currentTasks.map((task) => {
 			if (task.id === id) {
-				return { ...task, complete: !task.isComplete };
+				return { ...task, isComplete: !task.isComplete };
 			}
 			return task;
 		});
